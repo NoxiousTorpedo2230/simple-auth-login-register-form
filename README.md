@@ -376,12 +376,6 @@ SENDER_EMAIL=noreply@yourdomain.com
 
 <div align="center">
 
-## 📄 License
-
-This project is open source and available under the **MIT License**.
-
----
-
 ## 🔍 Testing the Application
 
 **Registration Flow:**
