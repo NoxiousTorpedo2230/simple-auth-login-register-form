@@ -21,7 +21,7 @@ const Login = ({ setAuth }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/login', formData, {
+      const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/login', formData, {
         withCredentials: true
       });
 
@@ -93,53 +93,3 @@ const Login = ({ setAuth }) => {
 };
 
 export default Login;
-
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
-
-// const Login = ({ setAuth }) => {
-//     const [formData, setFormData] = useState({ email: '', password: '' });
-//     const [error, setError] = useState('');
-//     const [loading, setLoading] = useState(false);
-//     const navigate = useNavigate();
-
-//     const handleChange = (e) => {
-//         setFormData({ ...formData, [e.target.name]: e.target.value.trim() });
-//     };
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         setError('');
-//         setLoading(true);
-
-//         try {
-//             const response = await axios.post(`http://localhost:4000/api/auth/login`, formData, { withCredentials: true });
-
-//             if (response.data.success) {
-//                 localStorage.setItem('isAuthenticated', 'true');
-//                 setAuth(true);
-//                 navigate('/dashboard', { replace: true });
-//             } else {
-//                 setError(response.data.message);
-//             }
-//         } catch (err) {
-//             setError(err.response?.data?.message || 'Server error. Please try again.');
-//         } finally {
-//             setLoading(false);
-//         }
-//     };
-
-//     return (
-//         <div className="auth-container">
-//             <form onSubmit={handleSubmit} className="auth-form">
-//                 <input type="email" name="email" onChange={handleChange} required placeholder="Email" />
-//                 <input type="password" name="password" onChange={handleChange} required placeholder="Password" />
-//                 <button type="submit" disabled={loading}>{loading ? 'Logging in...' : 'Login'}</button>
-//                 {error && <p className="error-message">{error}</p>}
-//             </form>
-//         </div>
-//     );
-// };
-
-// export default Login;
