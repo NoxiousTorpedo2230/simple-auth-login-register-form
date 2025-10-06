@@ -21,7 +21,7 @@ function App() {
         // Check if user is actually authenticated with the server
         const verifyAuth = async () => {
             try {
-                const response = await axios.post('http://localhost:4000/api/auth/is-auth', {}, {
+                const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/is-auth', {}, {
                     withCredentials: true
                 });
                 
