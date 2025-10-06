@@ -21,7 +21,7 @@ const VerifyAccount = () => {
 
     try {
       // Fixed endpoint to include full URL
-      const response = await axios.post('http://localhost:4000/api/auth/send-verify-otp', {}, { 
+      const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/send-verify-otp', {}, { 
         withCredentials: true 
       });
       
@@ -45,7 +45,7 @@ const VerifyAccount = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/verify-account', 
+      const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/verify-account', 
         { otp }, 
         { withCredentials: true }
       );
@@ -113,5 +113,6 @@ const VerifyAccount = () => {
     </div>
   );
 };
+
 
 export default VerifyAccount;
