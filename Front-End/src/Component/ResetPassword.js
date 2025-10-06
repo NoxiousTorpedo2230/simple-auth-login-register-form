@@ -38,7 +38,7 @@ const ResetPassword = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/reset-password', {
+      const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/reset-password', {
         email: formData.email,
         otp: formData.otp,
         newPass: formData.newPass
@@ -138,5 +138,6 @@ const ResetPassword = () => {
     </div>
   );
 };
+
 
 export default ResetPassword;
