@@ -29,7 +29,7 @@ const Register = ({ setAuth }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/register', {
+      const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/register', {
         name: formData.name,
         email: formData.email,
         password: formData.password
@@ -143,5 +143,6 @@ const Register = ({ setAuth }) => {
     </div>
   );
 };
+
 
 export default Register;
