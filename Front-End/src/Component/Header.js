@@ -8,7 +8,7 @@ const Header = ({ isAuthenticated, setAuth }) => {
   const handleLogout = async () => {
     try {
       // Make sure to include the full API URL
-      const response = await axios.post('http://localhost:4000/api/auth/logout', {}, { 
+      const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/logout', {}, { 
         withCredentials: true 
       });
       
@@ -56,5 +56,6 @@ const Header = ({ isAuthenticated, setAuth }) => {
     </header>
   );
 };
+
 
 export default Header;
