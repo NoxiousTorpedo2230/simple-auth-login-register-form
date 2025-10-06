@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/send-reset-otp', { email });
+      const response = await axios.post('https://simple-auth-login-register-form.onrender.com/api/auth/send-reset-otp', { email });
       
       if (response.data.success) {
         setMessage('OTP has been sent to your email. Please check your inbox.');
@@ -75,5 +75,6 @@ const ForgotPassword = () => {
     </div>
   );
 };
+
 
 export default ForgotPassword;
