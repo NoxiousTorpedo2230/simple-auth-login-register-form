@@ -14,7 +14,7 @@ connectDB();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:3000', // Make sure this matches your frontend URL
+    origin: 'https://simple-auth-login-register-form-frontend.onrender.com', // Make sure this matches your frontend URL
     credentials: true
 }));
 
@@ -25,5 +25,6 @@ app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
 app.listen(port, ()=> console.log(`Server Started on PORT:${port}`));
+
 
 
